@@ -4,21 +4,23 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../Context/CartContext';
 
 function Cart() {
-    const { cartItems, removeFromCart, incrementQuantity, decrementQuantity, clearCart } = useCart();
+    const { cartItems, removeFromCart, incrementQuantity, decrementQuantity, emptyCart } = useCart();
     const [checkoutMessage, setCheckoutMessage] = useState('');
     const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
     const handleCheckout = () => {
-        clearCart();
-        setCheckoutMessage('Thank you for your purchase!');
+        if (cartItems.length > 0) {
+            emptyCart();
+            setCheckoutMessage('Thank you for your purchase!');
+        } else {
+            setCheckoutMessage('Your cart is empty.');
+        }
     };
 
     return (
         <div>
-            {/* <div className="heading">
-                <h1>Shopping Cart</h1>
-            </div> */}
-            {cartItems.length === 0 ? (
+
+            {cartItems.length === 0 && !checkoutMessage ? (
                 <p className="empty">Your cart is empty.</p>
             ) : (
                 <section className="shopping-cart">
@@ -61,11 +63,11 @@ function Cart() {
                     </table>
                     <h3 className="total">Total: <span><i className="fa fa-indian-rupee-sign"></i>{totalPrice}</span></h3>
                     <div className='button-container'>
-                        <Link to="#" className="btn" onClick={handleCheckout}>Checkout Cart</Link>
+                        <button className="btn" onClick={handleCheckout}>Checkout Cart</button>
+                        {checkoutMessage && <p className="checkout-message">{checkoutMessage}</p>}
                     </div>
                 </section>
             )}
-            {checkoutMessage && <p className="checkout-message">{checkoutMessage}</p>}
         </div>
     );
 }

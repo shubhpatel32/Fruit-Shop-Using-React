@@ -26,7 +26,10 @@ const Header = () => {
                 {/* <div id="search-btn" className="fas fa-search"></div> */}
                 <div className="cart-count">
                     <NavLink to="/cart" id="cart-btn" className="fas fa-cart-shopping"></NavLink>
-                    <span className="count">{cartCount}</span>
+                    {
+                        cartCount === 0 ? <span></span> : <span className="count">{cartCount}</span>
+                    }
+
                 </div>
                 <NavLink to="/login" id="login-btn" className="fas fa-user"></NavLink>
             </div>
