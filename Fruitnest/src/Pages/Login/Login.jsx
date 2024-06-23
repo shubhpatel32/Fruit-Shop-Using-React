@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 function Login() {
     return (
         <div>
-            <div className="heading">
+            {/* <div className="heading">
                 <h1>Login/SignUp</h1>
-            </div>
-            <section>
+            </div> */}
+            <section className="login">
                 <form action="" className="login-form">
                     <h1>login</h1>
                     <input type="email" placeholder="email" className="box" />
@@ -19,7 +19,7 @@ function Login() {
                     </div>
                     <input type="submit" value="login now" className="btn" />
                     <p>forget password? <Link to="#">click here</Link></p>
-                    <p>Do not have an account? <Link to="#">create</Link></p>
+                    <p>Do not have an account? <Link to="/signup">create</Link></p>
                 </form>
             </section>
         </div>

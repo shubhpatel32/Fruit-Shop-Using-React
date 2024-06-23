@@ -12,6 +12,7 @@ import Login from './Pages/Login/Login';
 import Cart from './Pages/Cart/Cart';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { CartProvider } from './Context/CartContext';
+import Signup from './Pages/SignUp/Signup';
 
 
 function App() {
@@ -23,8 +24,9 @@ function App() {
         <CartProvider>
           <Header />
           <Routes>
-            <Route exact path="/login" element={<Login />} />
             <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/shop" element={<Shop />} />
             <Route exact path="/about" element={<About />} />
