@@ -1,6 +1,7 @@
 .footer {
   background: #cf1a1a;
   background: linear-gradient(to left, #cf1a1a 0%, #ffbb26 100%);
+  border-radius: 0%;
 
   .box-container {
     display: grid;

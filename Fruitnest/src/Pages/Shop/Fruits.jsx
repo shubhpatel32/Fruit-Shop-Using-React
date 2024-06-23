@@ -24,11 +24,11 @@ const Fruits = ({ fruit }) => {
             <div className="content">
                 <h3>{fruit.name}</h3>
                 <div className="price"><i className="fa fa-indian-rupee-sign"></i>{fruit.price}</div>
-                <div className="quantity-control">
+                {/* <div className="quantity-control">
                     <button onClick={handleDecrement}>-</button>
                     <span>{fruit.quantity} kg</span>
                     <button onClick={handleIncrement}>+</button>
-                </div>
+                </div> */}
                 <div className='addtocart'>
                     <Link to='#' className="btn" onClick={handleAddToCart}>add to cart</Link>
                 </div>

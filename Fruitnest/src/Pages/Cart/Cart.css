@@ -1,4 +1,10 @@
+.cart {
+  padding-top: 12rem;
+  padding-bottom: 8rem;
+}
+
 section {
+  padding-bottom: 8rem;
   align-items: center;
   width: 100%;
 }
@@ -7,7 +13,7 @@ section {
   display: flex;
   flex-direction: column;
   margin: 20px auto;
-  padding-top: 5rem;
+  padding-top: 8rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -85,4 +91,19 @@ section {
       border-color: black;
     }
   }
+}
+
+.empty {
+  color: red;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 9rem;
+  padding-bottom: 21rem;
+  text-transform: none;
+}
+.checkout-message {
+  color: green;
+  text-transform: none;
+  font-size: 3rem;
+  text-align: center;
 }
