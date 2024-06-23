@@ -1,7 +1,14 @@
-.blogs .box-container {
+.blogs-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
 
   .box {
     box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem #a8a297;
@@ -54,18 +61,9 @@
         font-size: 1.4rem;
         color: black;
         text-transform: none;
+        text-align: justify;
         line-height: 2;
         padding: 1rem 0;
-        text-align: justify;
-      }
-
-      .button {
-        color: #ff9421;
-        font-size: 1.4rem;
-
-        &:hover {
-          text-decoration: underline;
-        }
       }
     }
   }

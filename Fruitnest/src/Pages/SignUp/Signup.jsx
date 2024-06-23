@@ -70,8 +70,8 @@ function Signup() {
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
-                    <input type="submit" value="Sign Up Now" className="btn" />
-                    <p>Already have an account? <Link to="/login">Login here</Link></p>
+                    <input type="submit" value="Sign Up" className="btn" />
+                    <p>Already have an account? <Link to="/login">Login </Link></p>
                 </form>
             </section>
         </div>

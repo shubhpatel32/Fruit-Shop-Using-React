@@ -30,7 +30,7 @@ function Shop() {
         {
             id: 4,
             name: "Mango",
-            price: 40,
+            price: 90,
             image: "Images/mango.jpeg",
             quantity: 1,
         },
@@ -117,7 +117,35 @@ function Shop() {
             price: 10,
             image: "Images/jamun.webp",
             quantity: 1,
-        }
+        },
+        {
+            id: 17,
+            name: "Pomegranate",
+            price: 70,
+            image: "Images/pomegranate.webp",
+            quantity: 1,
+        },
+        {
+            id: 18,
+            name: "Plum",
+            price: 50,
+            image: "Images/plums.jpg",
+            quantity: 1,
+        },
+        {
+            id: 19,
+            name: "Apricot",
+            price: 120,
+            image: "Images/apricot.webp",
+            quantity: 1,
+        },
+        {
+            id: 20,
+            name: "Pear",
+            price: 60,
+            image: "Images/pear.jpg",
+            quantity: 1,
+        },
     ];
 
 
@@ -125,7 +153,7 @@ function Shop() {
         <div>
             <div className="heading">
                 <h1>Our Shop</h1>
-                <p><Link to="/">Home <span>{">>"}</span></Link> Shop </p>
+                <p><Link to="/">Home</Link><span>{">>"}</span> Shop </p>
             </div>
             <section className="fruits">
                 {/* <h1 className="title"> Our <span>fruits</span> </h1> */}

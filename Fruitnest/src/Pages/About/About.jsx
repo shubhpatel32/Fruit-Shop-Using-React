@@ -8,33 +8,28 @@ function About() {
 
             <div className="heading">
                 <h1>About Us</h1>
-                <p><Link to="/">Home &gt;&gt;</Link> About</p>
+                <p><Link to="/">Home</Link><span>{">>"}</span> About</p>
             </div>
             <section className="about">
                 <div className="content">
                     <h1>Welcome to Our Shop</h1>
                     <h3>Fresh & Organic Fruits</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, voluptate praesentium possimus incidunt
-                        ratione quibusdam sit tenetur perferendis rem odit impedit eius soluta doloremque esse accusantium
-                        facere maiores sint mollitia. Lorem ipsum,
-                        dolor sit amet consectetur adipisicing elit. Modi aperiam velit, ipsa quas unde, culpa rerum voluptate
-                        sunt ad vitae quia iste esse temporibus perferendis quibusdam nesciunt in ratione molestiae!
+                        Welcome to Fruit Nest, your ultimate online destination dedicated to bringing you the finest selection of fruits from around the world. At Fruit Nest, we're passionate about ensuring every fruit you receive is not only delicious but also of the highest quality. Our commitment begins with partnering directly with trusted farmers who share our values of sustainability and ethical farming practices. This direct relationship allows us to carefully handpick each fruit at its peak ripeness, ensuring optimal flavor and nutrition.
+
+
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis saepe voluptatum a dignissimos
-                        harum eligendi quisquam corrupti reprehenderit suscipit. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Nisi veniam explicabo
-                        asperiores dolore voluptatem. Sit magni doloribus quisquam minima? Sit modi, quisquam nam maiores,
-                        accusamus doloremque et voluptatem ea corrupti illum at sequi cupiditate voluptatibus debitis itaque
-                        minus aliquam ipsa? Voluptatem sed
-                        minima in corrupti odio impedit, adipisci laborum maiores.
+                        Fruit Nest is more than just a marketplace; it's a community of fruit enthusiasts and health-conscious individuals who value wholesome living. We believe that enjoying fresh fruits should be both a pleasure and a source of nourishment. From the juicy sweetness of California strawberries to the exotic allure of Costa Rican pineapples, each fruit in our selection tells a story of its origin and journey to your table.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus corporis animi ipsum mollitia.
-                        Temporibus obcaecati id porro sint nobis, ex fugiat omnis delectus harum atque suscipit voluptatibus
-                        nisi aperiam corrupti? Lorem ipsum dolor
-                        sit amet.
+                        Our platform not only offers convenience but also empowers you to make informed choices about what you consume. We strive to provide transparency in our sourcing, ensuring that every fruit meets rigorous quality standards before it reaches your doorstep. Whether you're looking for everyday fruits for your family or exotic varieties to explore new flavors, Fruit Nest is here to cater to your cravings and culinary adventures.
+                    </p>
+                    <p>
+                        Fruits are nature's nutritional powerhouses, packed with essential vitamins, minerals, and antioxidants that are vital for overall health and well-being. From vitamin C in citrus fruits that boosts immune function to potassium in bananas that supports heart health, each fruit offers a unique combination of nutrients. These nutrients not only help to maintain proper bodily functions but also play a crucial role in preventing chronic diseases such as heart disease, diabetes, and certain cancers. Regular consumption of fruits as part of a balanced diet can contribute significantly to maintaining optimal health throughout life.
+                    </p>
+                    <p>
+                        Join us on this flavorful journey where health meets taste, and discover why Fruit Nest is your trusted partner in bringing nature's goodness right to your home.
                     </p>
                     <Link to="#" className="butn">Read More</Link>
                 </div>

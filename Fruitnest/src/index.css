@@ -28,7 +28,7 @@ html {
 }
 
 section {
-  padding: 3rem 9%;
+  padding: 3rem 7%;
 }
 
 .heading {
@@ -50,6 +50,12 @@ section {
     font-size: 2rem;
     color: black;
     font-weight: bold;
+
+    span {
+      &:hover {
+        color: black !important;
+      }
+    }
 
     a {
       color: black;

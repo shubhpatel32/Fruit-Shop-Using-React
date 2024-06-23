@@ -34,6 +34,7 @@
       }
 
       p {
+        text-transform: none;
         color: black;
         font-size: 1.5rem;
         line-height: 2;
@@ -81,6 +82,7 @@
       }
 
       .bttn {
+        padding: 1rem 0.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;

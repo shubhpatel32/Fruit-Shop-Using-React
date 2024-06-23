@@ -4,6 +4,7 @@
   .slides-container {
     height: 100%;
     width: 100%;
+    padding-top: 0.5rem;
     .slide {
       display: grid;
       align-items: center;

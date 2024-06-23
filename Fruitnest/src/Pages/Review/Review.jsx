@@ -3,12 +3,24 @@ import { Link } from 'react-router-dom';
 import './Review.css';
 
 function Review() {
+    const reviews = [
+        { name: "Shlok", role: "happy client", image: "Images/male.png", comment: "I'm very impressed with the quick delivery service. The scooter arrived within 30 minutes of placing my order. Excellent service!" },
+        { name: "Avani", role: "happy client", image: "Images/female.png", comment: "Great customer support! I can always reach them on the phone, no matter the time. Really convenient for busy people like me." },
+        { name: "Anshuman", role: "happy client", image: "Images/male.png", comment: "The payment process is so easy! I love the flexibility to pay with cash or UPI. It makes transactions hassle-free." },
+        { name: "Simran", role: "happy client", image: "Images/female.png", comment: "Absolutely amazing service! The delivery was prompt and the customer service is top-notch. Highly recommended!" },
+        { name: "Virat", role: "happy client", image: "Images/male.png", comment: "Impressed with the professionalism! They really take care of every detail. Will definitely use their service again." },
+        { name: "Anushka", role: "happy client", image: "Images/female.png", comment: "Superb experience! The entire process was seamless from start to finish. Their attention to customer satisfaction is commendable." },
+        { name: "Riya", role: "satisfied customer", image: "Images/female.png", comment: "Quick response and effective service! I'm glad I chose them for my delivery needs. Their reliability sets them apart." },
+        { name: "Kabir", role: "regular customer", image: "Images/male.png", comment: "Consistently excellent service! I've been using their service for months now and they never disappoint. Highly reliable!" },
+        { name: "Priya", role: "new customer", image: "Images/female.png", comment: "First-time user and very impressed! The whole experience was smooth and efficient. Definitely recommend to others." },
+    ];
+
     return (
         <div>
             <div className="heading">
-                <h1>client's reviews</h1>
+                <h1>Client's Reviews</h1>
                 <p>
-                    <Link to="/">Home<span>{">>"}</span></Link> review
+                    <Link to="/">Home</Link><span>{">>"}</span> review
                 </p>
             </div>
 
@@ -16,87 +28,39 @@ function Review() {
                 <div className="info">
                     <div className="image" style={{ backgroundImage: "url('Images/scooter_147272.png')" }}></div>
                     <div className="content">
-                        <h3>fast delivery</h3>
-                        <span>within 30 minutes</span>
+                        <h3>Fast Delivery</h3>
+                        <span>Within 30 minutes</span>
                     </div>
                 </div>
                 <div className="info">
                     <div className="image" style={{ backgroundImage: "url('Images/phone-call_3616215.png')" }}></div>
                     <div className="content">
-                        <h3>available on phone</h3>
-                        <span>anytime</span>
+                        <h3>Available on Phone</h3>
+                        <span>Anytime</span>
                     </div>
                 </div>
                 <div className="info">
                     <div className="image" style={{ backgroundImage: "url('Images/pay_625599.png')" }}></div>
                     <div className="content">
-                        <h3>easy payments</h3>
-                        <span>cash or UPI</span>
+                        <h3>Easy Payments</h3>
+                        <span>Cash or UPI</span>
                     </div>
                 </div>
             </section>
 
             <section className="review">
-                <div className="box">
-                    <div className="user">
-                        <div className="image" style={{ backgroundImage: "url('Images/male.png')" }}></div>
-                        <div className="info">
-                            <h3>Shlok</h3>
-                            <span>happy client</span>
+                {reviews.map((review, index) => (
+                    <div className="box" key={index}>
+                        <div className="user">
+                            <div className="image" style={{ backgroundImage: `url('${review.image}')` }}></div>
+                            <div className="info">
+                                <h3>{review.name}</h3>
+                                <span>{review.role}</span>
+                            </div>
                         </div>
+                        <p>{review.comment}</p>
                     </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste voluptate tenetur cum aut fugit? Dolores fuga similique officia vel laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam est magni fuga, nostrum porro recusandae.</p>
-                </div>
-                <div className="box">
-                    <div className="user">
-                        <div className="image" style={{ backgroundImage: "url('Images/female.png')" }}></div>
-                        <div className="info">
-                            <h3>Avani</h3>
-                            <span>happy client</span>
-                        </div>
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste voluptate tenetur cum aut fugit? Dolores fuga similique officia vel laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, architecto voluptas. Consectetur alias quia fuga animi, at, accusantium ea obcaecati.</p>
-                </div>
-                <div className="box">
-                    <div className="user">
-                        <div className="image" style={{ backgroundImage: "url('Images/male.png')" }}></div>
-                        <div className="info">
-                            <h3>Anshuman</h3>
-                            <span>happy client</span>
-                        </div>
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste voluptate tenetur cum aut fugit? Dolores fuga similique officia vel laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, laudantium impedit obcaecati asperiores blanditiis ipsa.</p>
-                </div>
-                <div className="box">
-                    <div className="user">
-                        <div className="image" style={{ backgroundImage: "url('Images/female.png')" }}></div>
-                        <div className="info">
-                            <h3>Simran</h3>
-                            <span>happy client</span>
-                        </div>
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste voluptate tenetur cum aut fugit? Dolores fuga similique officia vel laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius illo inventore provident, nostrum in odit? Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div className="box">
-                    <div className="user">
-                        <div className="image" style={{ backgroundImage: "url('Images/male.png')" }}></div>
-                        <div className="info">
-                            <h3>Virat</h3>
-                            <span>happy client</span>
-                        </div>
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste voluptate tenetur cum aut fugit? Dolores fuga similique officia vel laudantium! Lorem ipsum dolor, sit amet consectetur adipisicing elit. natus adipisci, rerum odit nulla quis porro quas Lorem ipsum dolor, sit amet elit. Quia, tempora.</p>
-                </div>
-                <div className="box">
-                    <div className="user">
-                        <div className="image" style={{ backgroundImage: "url('Images/female.png')" }}></div>
-                        <div className="info">
-                            <h3>Anushka</h3>
-                            <span>happy client</span>
-                        </div>
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste voluptate tenetur cum aut fugit? Dolores fuga similique officia vel laudantium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque dolorem ducimus repellat aut dolor iste quia, pariatur quasi molestias? Hic?</p>
-                </div>
+                ))}
             </section>
         </div>
     );
