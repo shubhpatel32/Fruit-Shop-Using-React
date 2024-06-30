@@ -1,105 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useCart } from '../../Context/CartContext';
-import './Header.css';
 
 const Header = () => {
-
     const { cartItems } = useCart();
-    const cartCount = cartItems.reduce((total, item) => total + (item.quantity / item.quantity), 0);
+    const cartCount = cartItems.length;
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="header">
-            <Link to="/" className="logo"><i className="fa-solid fa-apple-whole"></i>Fruitnest</Link>
+        <header className="fixed top-0 left-0 right-0 w-full h-[7rem] z-50 bg-gradient-to-l from-red-700 to-yellow-400 flex items-center justify-between px-8 py-4 md:px-16 md:py-8">
+            <Link to="/" className="text-[2.5rem] md:text-[2.5rem] font-bold text-black hover:text-black cursor-pointer flex-shrink-0">
+                <i className="fa-solid fa-apple-whole pr-2 text-red-700"></i>Fruitnest
+            </Link>
 
-            <nav className="navbar">
-                <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
-                <NavLink to="/shop" className={({ isActive }) => (isActive ? 'active' : '')}>Shop</NavLink>
-                <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>About</NavLink>
-                <NavLink to="/review" className={({ isActive }) => (isActive ? 'active' : '')}>Review</NavLink>
-                <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : '')}>Blog</NavLink>
-                <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>Contact</NavLink>
-            </nav>
-
-            <div className="icons">
-                <div id="menu-btn" className="fas fa-bars"></div>
-                {/* <div id="search-btn" className="fas fa-search"></div> */}
-                <div className="cart-count">
-                    <NavLink to="/cart" id="cart-btn" className="fas fa-cart-shopping"></NavLink>
-                    {
-                        cartCount === 0 ? <span></span> : <span className="count">{cartCount}</span>
-                    }
-
-                </div>
-                <NavLink to="/login" id="login-btn" className="fas fa-user"></NavLink>
+            <div className="flex items-center justify-between w-full md:w-auto">
+                <nav className={`absolute top-[61px] flex-col md:flex-row md:flex ${isMenuOpen ? 'flex' : 'hidden'} md:flex items-center text-[1.5rem] md:text-2xl text-white gap-4 font-medium w-full bg-gradient-to-l from-red-700 to-yellow-400 left-0 md:items-center md:justify-center md:top-[10px] md:w-auto md:static md:bg-none`}>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                        Home
+                    </NavLink>
+                    <NavLink to="/shop" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                        Shop
+                    </NavLink>
+                    <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                        About
+                    </NavLink>
+                    <NavLink to="/review" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                        Review
+                    </NavLink>
+                    <NavLink to="/blog" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                        Blog
+                    </NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                        Contact
+                    </NavLink>
+                </nav>
             </div>
 
-            <form action="" className="search-form">
-                <input type="search" placeholder="Search here" id="search-box" />
-                <label htmlFor="search-box" className="fas fa-search"></label>
-            </form>
-
-            {/* <div className="shopping-cart">
-                <div className="box">
-                    <i className="fas fa-times"></i>
-                    <div className="image" style={{ backgroundImage: 'url(Images/apple.jpg)' }}></div>
-                    <div className="content">
-                        <h3>Apple</h3>
-                        <span className="quantity">1kg</span>
-                        <span className="multiply">*</span>
-                        <span className="price"><i className="fa fa-indian-rupee-sign"></i>50</span>
-                    </div>
+            <div className="flex text-center justify-center">
+                <div id="menu-btn" className="md:hidden fas fa-bars text-[2.5rem] ml-4 cursor-pointer text-black hover:text-white text-center" onClick={() => setIsMenuOpen(!isMenuOpen)}></div>
+                <div className="relative">
+                    <NavLink to="/cart" id="cart-btn" className="fas fa-cart-shopping text-[2.5rem] md:text-[2.5rem] ml-4 cursor-pointer text-black hover:text-white"></NavLink>
+                    {cartCount > 0 && (
+                        <span className="absolute top-[-8px] right-[-8px] bg-yellow-500 text-black text-sm px-2 py-1 rounded-full">
+                            {cartCount}
+                        </span>
+                    )}
                 </div>
-
-                <div className="box">
-                    <i className="fas fa-times"></i>
-                    <div className="image" style={{ backgroundImage: 'url(Images/banana.webp)' }}></div>
-                    <div className="content">
-                        <h3>Banana</h3>
-                        <span className="quantity">1kg</span>
-                        <span className="multiply">*</span>
-                        <span className="price"><i className="fa fa-indian-rupee-sign"></i>15</span>
-                    </div>
-                </div>
-
-                <div className="box">
-                    <i className="fas fa-times"></i>
-                    <div className="image" style={{ backgroundImage: 'url(Images/mango.jpeg)' }}></div>
-                    <div className="content">
-                        <h3>mango</h3>
-                        <span className="quantity">1kg</span>
-                        <span className="multiply">*</span>
-                        <span className="price"><i className="fa fa-indian-rupee-sign"></i>40</span>
-                    </div>
-                </div>
-
-                <div className="box">
-                    <i className="fas fa-times"></i>
-                    <div className="image" style={{ backgroundImage: 'url(Images/orange.jpg)' }}></div>
-                    <div className="content">
-                        <h3>Orange</h3>
-                        <span className="quantity">1kg</span>
-                        <span className="multiply">*</span>
-                        <span className="price"><i className="fa fa-indian-rupee-sign"></i>25</span>
-                    </div>
-                </div>
-
-                <h3 className="total">Total: <span><i className="fa fa-indian-rupee-sign"></i>130</span></h3>
-                <Link to="#" className="btn">Checkout Cart</Link>
-            </div> */}
-
-            {/* <form action="" className="login-form">
-                <h3>login</h3>
-                <input type="email" placeholder="email" className="box" />
-                <input type="password" placeholder="password" className="box" />
-                <div className="remember">
-                    <input type="checkbox" id="remember-me" />
-                    <label htmlFor="remember-me">remember me</label>
-                </div>
-                <input type="submit" value="login now" className="btn" />
-                <p>forget password? <Link to="#">click here</Link></p>
-                <p>Do not have an account? <Link to="#">create</Link></p>
-            </form> */}
+                <NavLink to="/login" id="login-btn" className="fas fa-user text-[2.5rem] md:text-[2.5rem] ml-4 cursor-pointer text-black hover:text-white"></NavLink>
+            </div>
         </header>
     );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Fruits from './Fruits';
-import './Fruits.css';
+// import './Fruits.css';
 
 
 function Shop() {
@@ -155,16 +155,10 @@ function Shop() {
                 <h1>Our Shop</h1>
                 <p><Link to="/">Home</Link><span>{">>"}</span> Shop </p>
             </div>
-            <section className="fruits">
-                {/* <h1 className="title"> Our <span>fruits</span> </h1> */}
-                <div className="box-container">
-                    {fruits.map((fruit, index) => (
-                        <Fruits
-                            fruit={fruit}
-                            key={index}
-                        />
-                    ))}
-                </div>
+            <section className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:grid-cols-2">
+                {fruits.map((fruit, index) => (
+                    <Fruits key={index} fruit={fruit} />
+                ))}
             </section>
         </div>
     );

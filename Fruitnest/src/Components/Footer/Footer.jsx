@@ -1,60 +1,91 @@
-import './Footer.css'
 import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
         <div>
-            <section className="footer">
-                <div className="box-container">
-                    <div className="box">
-                        <h3>Quick Links</h3>
-                        <Link to="/"><i className="fas fa-arrow-right"></i> home</Link>
-                        <Link to="/shop"><i className="fas fa-arrow-right"></i> shop</Link>
-                        <Link to="/about"><i className="fas fa-arrow-right"></i> about</Link>
-                        <Link to="/review"><i className="fas fa-arrow-right"></i> review</Link>
-                        <Link to="/blog"><i className="fas fa-arrow-right"></i> blog</Link>
-                        <Link to="/contact"><i className="fas fa-arrow-right"></i> contact</Link>
+            <section className="bg-gradient-to-l from-red-700 to-yellow-400">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-4 md:gap-[12rem] justify-between w-full">
+                    <div className="flex flex-col text-2xl gap-4 text-white ">
+                        <h3 className="text-3xl text-black mb-5 font-medium">Quick Links</h3>
+                        <Link to="/" className='group inline-block whitespace-nowrap'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> home
+                        </Link>
+                        <Link to="/shop" className='group'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> shop
+                        </Link>
+                        <Link to="/about" className='group'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> about
+                        </Link>
+                        <Link to="/review" className='group'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> review
+                        </Link>
+                        <Link to="/blog" className='group'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> blog
+                        </Link>
+                        <Link to="/contact" className='group'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> contact
+                        </Link>
                     </div>
 
-                    <div className="box">
-                        <h3>Extra Links</h3>
-                        <Link to="/cart"> <i className="fas fa-arrow-right"></i> My Order</Link>
-                        <Link to="#"> <i className="fas fa-arrow-right"></i> My Favourite</Link>
-                        <Link to="#"> <i className="fas fa-arrow-right"></i> My Wishlist</Link>
-                        <Link to="/login"> <i className="fas fa-arrow-right"></i> My Account</Link>
-                        <Link to="#"> <i className="fas fa-arrow-right"></i> Terms or Use</Link>
+                    <div className="flex flex-col text-2xl gap-4 text-white">
+                        <h3 className="text-3xl text-black mb-5 font-medium">Extra Links</h3>
+                        <Link to="/cart" className='group'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> My Order
+                        </Link>
+                        <Link to="#" className='group'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> My Favourite
+                        </Link>
+                        <Link to="#" className='group'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> My Wishlist
+                        </Link>
+                        <Link to="/login" className='group'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> My Account
+                        </Link>
+                        <Link to="#" className='group'>
+                            <i className="fas fa-arrow-right group-hover:text-black"></i> Terms or Use
+                        </Link>
                     </div>
 
-                    <div className="box">
-                        <h3>Follow us</h3>
-                        <Link to="#"><i className="fa-brands fa-facebook"></i> facebook</Link>
-                        <Link to="#"><i className="fa-brands fa-instagram"></i> instagram</Link>
-                        <Link to="#"><i className="fa-brands fa-twitter"></i> twitter</Link>
-                        <Link to="#"><i className="fa-brands fa-linkedin"></i> linkedin</Link>
-                        <Link to="#"><i className="fa-brands fa-pinterest"></i> pinterest</Link>
+                    <div className="flex flex-col text-2xl gap-4 text-white">
+                        <h3 className="text-3xl text-black mb-5 font-medium">Follow us</h3>
+                        <Link to="#" className='group'>
+                            <i className="fa-brands fa-facebook group-hover:text-black"></i> facebook
+                        </Link>
+                        <Link to="#" className='group'>
+                            <i className="fa-brands fa-instagram group-hover:text-black"></i> instagram
+                        </Link>
+                        <Link to="#" className='group'>
+                            <i className="fa-brands fa-twitter group-hover:text-black"></i> twitter
+                        </Link>
+                        <Link to="#" className='group'>
+                            <i className="fa-brands fa-linkedin group-hover:text-black"></i> linkedin
+                        </Link>
+                        <Link to="#" className='group'>
+                            <i className="fa-brands fa-pinterest group-hover:text-black"></i> pinterest
+                        </Link>
                     </div>
 
+                    <div className="flex flex-col text-2xl gap-4 text-white">
+                        <h3 className="text-3xl text-black mb-5 font-medium">Payments</h3>
 
-                    <div className="box">
-                        <h3>Newsletter</h3>
-                        <p>Subscribe for latest updates</p>
-                        <form action="#">
-                            <input type="email" placeholder="email" />
-                            <input type="submit" value="subscribe" className='btn' />
+                        <Link to="#" className='group'>
+                            <i className="fa-brands fa-google-pay group-hover:text-black mr-3  text-3xl"></i>
+                            Google</Link>
+                        <Link to="#" className='group'>
+                            <i className="fa-regular fa-credit-card group-hover:text-black mr-5"></i>
+                            Card</Link>
+                        <Link to="#" className='group'>
+                            <i className="fa-brands fa-apple-pay group-hover:text-black mr-3 text-3xl"></i>
+                            Apple</Link>
+                        <Link to="#" className='group'>
+                            <i className="fa-brands fa-amazon-pay group-hover:text-black mr-3 text-3xl"></i>
+                            Amazon</Link>
 
-                        </form>
-                        <div className="payment">
-                            <Link to="#"><i className="fa-brands fa-google-pay"></i></Link>
-                            <Link to="#"><i className="fa-regular fa-credit-card"></i></Link>
-                            <Link to="#"><i className="fa-brands fa-apple-pay"></i></Link>
-                            <Link to="#"><i className="fa-brands fa-amazon-pay"></i></Link>
-                        </div>
                     </div>
-
                 </div>
             </section>
 
-            <div className="credit">Created by Shubh Patel | All rights reserved!</div>
+            <div className="bg-black text-white text-center text-lg">Created by Shubh Patel | All rights reserved!</div>
         </div>
     )
 }

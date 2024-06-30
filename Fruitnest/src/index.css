@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -108,10 +112,6 @@ section {
   }
 }
 
-#menu-btn {
-  display: none;
-}
-
 .info-container {
   height: 100%;
   width: 100%;
@@ -150,6 +150,7 @@ section {
   }
 }
 
+/* lg */
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -163,22 +164,13 @@ section {
   }
 }
 
-@media (max-width: 768px) {
+/* md */
+/* @media (max-width: 768px) {
   #menu-btn {
     display: inline-block;
   }
 
   .header {
-    .search-form {
-      width: 100%;
-      right: 0;
-      border-radius: 0;
-      &.active {
-        top: 99%;
-        border-top: 0.2rem solid #a8a297;
-        border-bottom: 0.2rem solid #a8a297;
-      }
-    }
     .navbar {
       position: absolute;
       top: 99%;
@@ -314,4 +306,4 @@ section {
       }
     }
   }
-}
+} */
