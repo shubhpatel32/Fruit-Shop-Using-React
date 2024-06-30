@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Contact.css';
+// import './Contact.css';
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -67,24 +67,24 @@ const Contact = () => {
                 </p>
             </div>
 
-            <section className="contact">
+            <section className="contact flex flex-col">
 
-                <div className="icons-container">
-                    <div className="icons">
-                        <i className="fa-solid fa-phone"></i>
+                <div className="icons-container w-full gap-8 grid md:grid-cols-3 grid-cols-1">
+                    <div className="icons text-center border-2 border-solid border-[#a8a297] p-8">
+                        <i className="fa-solid fa-phone h-24 w-24 text-4xl leading-[6rem] bg-[#ff9421] text-white rounded-full hover:bg-[#cf1a1a]"></i>
                         <h3>Contact Number</h3>
                         <p>12345678910</p>
                         <p>5566778899</p>
                     </div>
 
-                    <div className="icons">
-                        <i className="fa-solid fa-envelope"></i>
+                    <div className="icons text-center border-2 border-solid border-[#a8a297] p-8">
+                        <i className="fa-solid fa-envelope h-24 w-24 text-4xl leading-[6rem] bg-[#ff9421] text-white rounded-full hover:bg-[#cf1a1a]"></i>
                         <h3>Email</h3>
                         <p>fruitnest@gmail.com</p>
                     </div>
 
-                    <div className="icons">
-                        <i className="fa-solid fa-location-dot"></i>
+                    <div className="icons text-center border-2 border-solid border-[#a8a297] p-8">
+                        <i className="fa-solid fa-location-dot h-24 w-24 text-4xl leading-[6rem] bg-[#ff9421] text-white rounded-full hover:bg-[#cf1a1a]"></i>
                         <h3>Address</h3>
                         <p>Vijapur, Mehsana, Gujarat - 382870</p>
                     </div>

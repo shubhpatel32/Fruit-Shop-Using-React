@@ -2,18 +2,9 @@ import React from 'react';
 import Slideshow from './Slideshow';
 import Banner from './Banner';
 import Newblogs from './Newblogs';
-import './Home.css';
 
 
 function Home() {
-    const slideshowImages = [
-        'SliderImages/strawberry.jpg',
-        'SliderImages/1212130.jpg',
-        'SliderImages/orange.jpg',
-        'SliderImages/orange-21.jpg',
-        'SliderImages/361096.jpg',
-    ];
-
     const banners = [
         {
             image: 'Images/apple.jpg',
@@ -82,10 +73,10 @@ function Home() {
 
     return (
         <div className="home">
-            <Slideshow images={slideshowImages} />
+            <Slideshow />
             <section className='deals'>
-                <h1>Best <span>Deals</span></h1>
-                <div className="banner-container">
+                <h1 className='text-center text-5xl text-[#ff9421] mt-12 font-bold'>Best <span className='text-[#cf1a1a]'>Deals</span></h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center w-full mt-8">
                     {banners.map((banner, index) => (
                         <Banner
                             key={index}
@@ -99,8 +90,8 @@ function Home() {
             </section>
 
             <section className='blogs'>
-                <h1>New <span>Blogs</span></h1>
-                <div className='blogs-container'>
+                <h1 className='text-center text-5xl mt-8 font-bold text-[#ff9421]'>New <span className='text-[#cf1a1a]'>Blogs</span></h1>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center w-full mt-8'>
                     {blogPosts.map((blogPost, index) => (
                         <Newblogs
                             key={index}

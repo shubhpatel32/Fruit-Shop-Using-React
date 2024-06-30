@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Review.css';
+// import './Review.css';
 
 function Review() {
     const reviews = [
@@ -24,41 +24,41 @@ function Review() {
                 </p>
             </div>
 
-            <section className="info-container">
-                <div className="info">
-                    <div className="image" style={{ backgroundImage: "url('Images/scooter_147272.png')" }}></div>
-                    <div className="content">
-                        <h3>Fast Delivery</h3>
-                        <span>Within 30 minutes</span>
+            <section className="w-full grid grid-cols-3 gap-8 justify-center">
+                <div className="flex items-center flex-col justify-center text-center ">
+                    <div className="bg-white h-32 w-full bg-center bg-contain bg-no-repeat" style={{ backgroundImage: "url('Images/scooter_147272.png')" }}></div>
+                    <div >
+                        <h3 className="text-[1.5rem] py-2 font-semibold">Fast Delivery</h3>
+                        <span className="text-[1.3rem]">Within 30 minutes</span>
                     </div>
                 </div>
-                <div className="info">
-                    <div className="image" style={{ backgroundImage: "url('Images/phone-call_3616215.png')" }}></div>
-                    <div className="content">
-                        <h3>Available on Phone</h3>
-                        <span>Anytime</span>
+                <div className="flex items-center flex-col justify-center text-center">
+                    <div className="bg-white h-32 w-full bg-center bg-contain bg-no-repeat" style={{ backgroundImage: "url('Images/phone-call_3616215.png')" }}></div>
+                    <div>
+                        <h3 className="text-[1.5rem] py-2 font-semibold">Available on Phone</h3>
+                        <span className="text-[1.3rem]">Anytime</span>
                     </div>
                 </div>
-                <div className="info">
-                    <div className="image" style={{ backgroundImage: "url('Images/pay_625599.png')" }}></div>
-                    <div className="content">
-                        <h3>Easy Payments</h3>
-                        <span>Cash or UPI</span>
+                <div className="flex items-center flex-col justify-center text-center">
+                    <div className="bg-white h-32 w-full bg-center bg-contain bg-no-repeat" style={{ backgroundImage: "url('Images/pay_625599.png')" }}></div>
+                    <div>
+                        <h3 className="text-[1.5rem] py-2 font-semibold">Easy Payments</h3>
+                        <span className="text-[1.3rem]">Cash or UPI</span>
                     </div>
                 </div>
             </section>
 
-            <section className="review">
+            <section className="w-full h-full grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 justify-center gap-12">
                 {reviews.map((review, index) => (
-                    <div className="box" key={index}>
-                        <div className="user">
-                            <div className="image" style={{ backgroundImage: `url('${review.image}')` }}></div>
+                    <div className="flex p-8 flex-col justify-center text-center h-[30rem] w-full overflow-hidden border-2 border-solid border-[#a8a297]" key={index}>
+                        <div className="flex items-center flex-col gap-4 p-4">
+                            <div className="h-[15rem] pt-20 bg-white w-full bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url('${review.image}')` }}></div>
                             <div className="info">
-                                <h3>{review.name}</h3>
-                                <span>{review.role}</span>
+                                <h3 className="text-3xl font-semibold text-black">{review.name}</h3>
+                                <span className="text-xl text-slate-800">{review.role}</span>
                             </div>
                         </div>
-                        <p>{review.comment}</p>
+                        <p className="text-[1.1rem] text-justify items-start text-slate-700 normal-case">{review.comment}</p>
                     </div>
                 ))}
             </section>

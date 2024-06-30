@@ -112,44 +112,6 @@ section {
   }
 }
 
-.info-container {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  justify-content: center;
-
-  .info {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-
-    .image {
-      background-color: white;
-      height: 8rem;
-      width: 100%;
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    .content {
-      h3 {
-        font-size: 1.5rem;
-        padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
-      }
-
-      span {
-        font-size: 1.3rem;
-      }
-    }
-  }
-}
-
 /* lg */
 @media (max-width: 991px) {
   html {
