@@ -7,7 +7,10 @@ const Header = () => {
     const cartCount = cartItems.length;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
+    onscroll = (isMenuOpen) => {
+        if (isMenuOpen)
+            setIsMenuOpen(false);
+    }
 
     return (
         <header className="fixed top-0 left-0 right-0 w-full h-[7rem] z-50 bg-gradient-to-l from-red-700 to-yellow-400 flex items-center justify-between px-8 py-4 md:px-16 md:py-8">
