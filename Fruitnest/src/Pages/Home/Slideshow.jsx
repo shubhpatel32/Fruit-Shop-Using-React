@@ -8,16 +8,16 @@ function Slideshow() {
             url: '/SliderImages/strawberry.jpg',
         },
         {
-            url: '../../public/SliderImages/1212130.jpg',
+            url: '/SliderImages/1212130.jpg',
         },
         {
-            url: '../../public/SliderImages/orange.jpg',
+            url: '/SliderImages/orange.jpg',
         },
         {
-            url: '../../public/SliderImages/orange-21.jpg',
+            url: '/SliderImages/orange-21.jpg',
         },
         {
-            url: '../../public/SliderImages/361096.jpg',
+            url: '/SliderImages/361096.jpg',
         },
     ];
 
