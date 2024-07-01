@@ -56,9 +56,12 @@ const Blog = () => {
 
     return (
         <div>
-            <div className="heading">
-                <h1>Our Blogs</h1>
-                <p><Link to="/">Home</Link><span>{">>"}</span> Blog</p>
+            <div className="heading bg-cover bg-center bg-no-repeat text-center pt-48 pb-32" style={{ backgroundImage: `url('/SliderImages/gradient bg.avif')` }}>
+                <h1 className="text-black text-[4rem]">About Us</h1>
+                <p className="pt-2 text-3xl text-black font-bold">
+                    <Link to="/" className="text-black pr-2 hover:text-red-700">Home</Link>
+                    <span className="hover:text-black">{">>"}</span> About
+                </p>
             </div>
 
             <section className="blogs">

@@ -17,13 +17,13 @@ function Review() {
 
     return (
         <div>
-            <div className="heading">
-                <h1>Client's Reviews</h1>
-                <p>
-                    <Link to="/">Home</Link><span>{">>"}</span> review
+            <div className="heading bg-cover bg-center bg-no-repeat text-center pt-48 pb-32" style={{ backgroundImage: `url('/SliderImages/gradient bg.avif')` }}>
+                <h1 className="text-black text-[4rem]">About Us</h1>
+                <p className="pt-2 text-3xl text-black font-bold">
+                    <Link to="/" className="text-black pr-2 hover:text-red-700">Home</Link>
+                    <span className="hover:text-black">{">>"}</span> About
                 </p>
             </div>
-
             <section className="w-full grid grid-cols-3 gap-8 justify-center">
                 <div className="flex items-center flex-col justify-center text-center ">
                     <div className="bg-white h-32 w-full bg-center bg-contain bg-no-repeat" style={{ backgroundImage: "url('Images/scooter_147272.png')" }}></div>

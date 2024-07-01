@@ -19,9 +19,12 @@ function Cart() {
 
     return (
         <div>
-            <div className="heading">
-                <h1>Shopping Cart</h1>
-                <p><Link to="/Shop">Shop</Link><span>{">>"}</span> Cart</p>
+            <div className="heading bg-cover bg-center bg-no-repeat text-center pt-48 pb-32" style={{ backgroundImage: `url('/SliderImages/gradient bg.avif')` }}>
+                <h1 className="text-black text-[4rem]">About Us</h1>
+                <p className="pt-2 text-3xl text-black font-bold">
+                    <Link to="/" className="text-black pr-2 hover:text-red-700">Home</Link>
+                    <span className="hover:text-black">{">>"}</span> About
+                </p>
             </div>
             {cartItems.length === 0 && !checkoutMessage ? (
                 <p className="empty text-5xl text-center pt-36 pb-[32rem] normal-case font-semibold">Your cart is empty.</p>

@@ -35,43 +35,6 @@ section {
   padding: 3rem 7%;
 }
 
-.heading {
-  background-image: url("SliderImages/gradient bg.avif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding-top: 12rem;
-  padding-bottom: 8rem;
-
-  h1 {
-    color: black;
-    font-size: 4rem;
-  }
-
-  p {
-    padding-top: 1rem;
-    font-size: 2rem;
-    color: black;
-    font-weight: bold;
-
-    span {
-      &:hover {
-        color: black !important;
-      }
-    }
-
-    a {
-      color: black;
-      padding-right: 0.5rem;
-
-      &:hover {
-        color: #cf1a1a;
-      }
-    }
-  }
-}
-
 /* .title {
   display: flex;
   align-items: center;

@@ -151,9 +151,12 @@ function Shop() {
 
     return (
         <div>
-            <div className="heading">
-                <h1>Our Shop</h1>
-                <p><Link to="/">Home</Link><span>{">>"}</span> Shop </p>
+            <div className="heading bg-cover bg-center bg-no-repeat text-center pt-48 pb-32" style={{ backgroundImage: `url('/SliderImages/gradient bg.avif')` }}>
+                <h1 className="text-black text-[4rem]">About Us</h1>
+                <p className="pt-2 text-3xl text-black font-bold">
+                    <Link to="/" className="text-black pr-2 hover:text-red-700">Home</Link>
+                    <span className="hover:text-black">{">>"}</span> About
+                </p>
             </div>
             <section className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:grid-cols-2">
                 {fruits.map((fruit, index) => (
