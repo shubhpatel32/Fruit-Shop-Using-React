@@ -5,7 +5,7 @@ import { RxDotFilled } from 'react-icons/rx';
 function Slideshow() {
     const slides = [
         {
-            url: '../../public/SliderImages/strawberry.jpg',
+            url: '/SliderImages/strawberry.jpg',
         },
         {
             url: '../../public/SliderImages/1212130.jpg',
