@@ -7,6 +7,8 @@ const Header = () => {
     const cartCount = cartItems.length;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+
+
     return (
         <header className="fixed top-0 left-0 right-0 w-full h-[7rem] z-50 bg-gradient-to-l from-red-700 to-yellow-400 flex items-center justify-between px-8 py-4 md:px-16 md:py-8">
             <Link to="/" className="text-[2.5rem] md:text-[2.5rem] font-bold text-black hover:text-black cursor-pointer flex-shrink-0">
@@ -37,7 +39,8 @@ const Header = () => {
             </div>
 
             <div className="flex text-center justify-center">
-                <div id="menu-btn" className="md:hidden fas fa-bars text-[2.5rem] ml-4 cursor-pointer text-black hover:text-white text-center" onClick={() => setIsMenuOpen(!isMenuOpen)}></div>
+                <div id="menu-btn" className={`md:hidden ${isMenuOpen ? 'fas fa-times' : 'fas fa-bars'} text-[2.5rem] ml-4 cursor-pointer text-black hover:text-white text-center`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                </div>
                 <div className="relative">
                     <NavLink to="/cart" id="cart-btn" className="fas fa-cart-shopping text-[2.5rem] md:text-[2.5rem] ml-4 cursor-pointer text-black hover:text-white"></NavLink>
                     {cartCount > 0 && (
@@ -48,7 +51,7 @@ const Header = () => {
                 </div>
                 <NavLink to="/login" id="login-btn" className="fas fa-user text-[2.5rem] md:text-[2.5rem] ml-4 cursor-pointer text-black hover:text-white"></NavLink>
             </div>
-        </header>
+        </header >
     );
 };
 
