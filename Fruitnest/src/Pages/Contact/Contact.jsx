@@ -72,33 +72,33 @@ const Contact = () => {
                 <div className="icons-container w-full gap-8 grid md:grid-cols-3 grid-cols-1">
                     <div className="icons text-center border-2 border-solid border-[#a8a297] p-8">
                         <i className="fa-solid fa-phone h-24 w-24 text-4xl leading-[6rem] bg-[#ff9421] text-white rounded-full hover:bg-[#cf1a1a]"></i>
-                        <h3>Contact Number</h3>
-                        <p>12345678910</p>
-                        <p>5566778899</p>
+                        <h3 className="text-3xl py-4 text-black font-normal">Contact Number</h3>
+                        <p className="text-2xl text-black normal-case">12345678910</p>
+                        <p className="text-2xl text-black normal-case">5566778899</p>
                     </div>
 
                     <div className="icons text-center border-2 border-solid border-[#a8a297] p-8">
                         <i className="fa-solid fa-envelope h-24 w-24 text-4xl leading-[6rem] bg-[#ff9421] text-white rounded-full hover:bg-[#cf1a1a]"></i>
-                        <h3>Email</h3>
-                        <p>fruitnest@gmail.com</p>
+                        <h3 className="text-3xl py-4 text-black font-normal">Email</h3>
+                        <p className="text-2xl text-black normal-case">fruitnest@gmail.com</p>
                     </div>
 
                     <div className="icons text-center border-2 border-solid border-[#a8a297] p-8">
                         <i className="fa-solid fa-location-dot h-24 w-24 text-4xl leading-[6rem] bg-[#ff9421] text-white rounded-full hover:bg-[#cf1a1a]"></i>
-                        <h3>Address</h3>
-                        <p>Vijapur, Mehsana, Gujarat - 382870</p>
+                        <h3 className="text-3xl py-4 text-black font-normal">Address</h3>
+                        <p className="text-2xl text-black normal-case">Vijapur, Mehsana, Gujarat - 382870</p>
                     </div>
                 </div>
 
-                <div className="row">
-                    <form onSubmit={handleFormSubmit}>
-                        <h3>Get in Touch</h3>
+                <div className="row w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <form onSubmit={handleFormSubmit} className="p-8 border-2 border-solid border-[#a8a297] ">
+                        <h3 className="text-3xl pb-4 text-black font-semibold">Get in Touch</h3>
 
-                        <div className="inputbox">
+                        <div className="inputbox grid grid-cols-1 md:grid-cols-2">
                             <input
                                 type="text"
                                 placeholder="Enter your name"
-                                className="box"
+                                className="box p-4 text-[1.6rem] border border-solid border-[#a8a297] rounded-[0.5rem] text-black normal-case m-[0.5rem]"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                             />
@@ -106,18 +106,18 @@ const Contact = () => {
                             <input
                                 type="email"
                                 placeholder="Enter your email"
-                                className="box"
+                                className="box p-4 text-[1.6rem] border border-solid border-[#a8a297] rounded-[0.5rem] text-black normal-case m-[0.5rem]"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                             {emailError && <p className="error">{emailError}</p>}
                         </div>
 
-                        <div className="inputbox">
+                        <div className="inputbox grid grid-cols-1 md:grid-cols-2">
                             <input
                                 type="text"
                                 placeholder="Enter your contact number"
-                                className="box"
+                                className="box p-4 text-[1.6rem] border border-solid border-[#a8a297] rounded-[0.5rem] text-black normal-case m-[0.5rem]"
                                 value={contact}
                                 onChange={(e) => setContact(e.target.value)}
                             />
@@ -125,15 +125,16 @@ const Contact = () => {
                             <input
                                 type="text"
                                 placeholder="Enter your subject"
-                                className="box"
+                                className="box p-4 text-[1.6rem] border border-solid border-[#a8a297] rounded-[0.5rem] text-black normal-case m-[0.5rem]"
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
                             />
                             {subjectError && <p className="error">{subjectError}</p>}
                         </div>
 
-                        <div className="bttn">
+                        <div className="bttn items-center flex justify-center flex-col">
                             <textarea
+                                className='w-full  h-40 resize-none p-4 text-[1.6rem] border border-solid border-[#a8a297] rounded-[0.5rem] text-black normal-case m-[0.5rem]'
                                 placeholder="Your message"
                                 cols="30"
                                 rows="8"
@@ -147,7 +148,7 @@ const Contact = () => {
 
                     {/* Google Maps iframe */}
                     <iframe
-                        className="map"
+                        className="map border border-solid border-[#a8a297] w-full h-[30rem] md:h-full"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29257.8559062837!2d72.72507159274966!3d23.560110181742456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395db56e2f3d16a9%3A0x480f5022b1db7329!2sVijapur%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1710083990028!5m2!1sen!2sin"
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Signup.css';
 import { Link } from 'react-router-dom';
 
 function Signup() {
@@ -31,50 +30,50 @@ function Signup() {
 
     return (
         <div>
-            <section className="signup">
-                <form onSubmit={handleSignup} className="signup-form">
-                    <h1>Sign Up</h1>
+            <section className="signup bg-[#fff] px-5 py-10  min-h-[100vh] flex items-center justify-center text-2xl w-full">
+                <form onSubmit={handleSignup} className="signup-form  m-4 p-12 flex flex-col shadow-[0.2rem_0.2rem_0.2rem_0.2rem_#a8a297]">
+                    <h1 className="text-center text-3xl mb-5 font-semibold">Sign Up</h1>
                     {error && <p className="error">{error}</p>}
                     <input
                         type="text"
                         placeholder="First Name"
-                        className="box"
+                        className="box p-2 mb-7 w-full  rounded border border-solid border-[#a8a297]"
                         value={firstName}
                         onChange={(e) => setFirstName(e.target.value)}
                     />
                     <input
                         type="text"
                         placeholder="Last Name"
-                        className="box"
+                        className="box p-2 mb-7 w-full  rounded border border-solid border-[#a8a297]"
                         value={lastName}
                         onChange={(e) => setLastName(e.target.value)}
                     />
                     <input
                         type="email"
                         placeholder="Email"
-                        className="box"
+                        className="box p-2 mb-7 w-full  rounded border border-solid border-[#a8a297]"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <input
                         type="password"
                         placeholder="Password"
-                        className="box"
+                        className="box p-2 mb-7 w-full  rounded border border-solid border-[#a8a297]"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <input
                         type="password"
                         placeholder="Confirm Password"
-                        className="box"
+                        className="box p-2 mb-7 w-full  rounded border border-solid border-[#a8a297]"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
-                    <input type="submit" value="Sign Up" className="btn" />
-                    <p>Already have an account? <Link to="/login">Login </Link></p>
+                    <input type="submit" value="Sign Up" className="btn p-3 rounded text-white cursor-pointer w-full text-2xl" />
+                    <p className="text-center mt-3 normal-case">Already have an account? <Link to="/login" className=" text-[#cf1a1a] hover:underline">Login </Link></p>
                 </form>
             </section>
-        </div>
+        </div >
     );
 }
 
