@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
@@ -35,12 +35,20 @@ function Slideshow() {
         setCurrentIndex(newIndex);
     };
 
-    const goToSlide = (slideIndex) => {
-        setCurrentIndex(slideIndex);
-    };
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         nextSlide();
+    //     }, 3000);
+
+    //     return () => clearTimeout(timer);
+    // }, [currentIndex]);
+
+    // const goToSlide = (slideIndex) => {
+    //     setCurrentIndex(slideIndex);
+    // };
 
     return (
-        <div className='max-w-[1400px] h-[500px] md:h-[780px] w-full m-auto pt-32 px-4 relative group'>
+        <div className='max-w-[1400px] h-[500px] md:h-[780px] w-full m-auto pt-32 px-4 relative group transition-none'>
             <div
                 style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
                 className='w-full h-full rounded-2xl bg-center bg-cover duration-200'
