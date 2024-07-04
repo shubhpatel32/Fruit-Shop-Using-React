@@ -20,22 +20,33 @@ const Header = () => {
 
             <div className="flex items-center justify-between w-full md:w-auto">
                 <nav className={`absolute top-[61px] flex-col md:flex-row md:flex ${isMenuOpen ? 'flex' : 'hidden'} md:flex items-center text-[1.5rem] md:text-2xl text-white gap-4 font-medium w-full bg-gradient-to-l from-red-700 to-yellow-400 left-0 md:items-center md:justify-center md:top-[10px] md:w-auto md:static md:bg-none divide-y`}>
-                    <NavLink to="/" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+
+                    <NavLink to="/" className={({ isActive }) => `${isActive ? 'text-black' : 'text-white'} hover:text-black`}>
                         Home
                     </NavLink>
-                    <NavLink to="/shop" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                    <NavLink to="/shop" className={({ isActive }) =>
+                        `${isActive ? 'text-black' : 'text-white'} hover:text-black`
+                    }>
                         Shop
                     </NavLink>
-                    <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                    <NavLink to="/about" className={({ isActive }) =>
+                        `${isActive ? 'text-black' : 'text-white'} hover:text-black`
+                    }>
                         About
                     </NavLink>
-                    <NavLink to="/review" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                    <NavLink to="/review" className={({ isActive }) =>
+                        `${isActive ? 'text-black' : 'text-white'} hover:text-black`
+                    }>
                         Review
                     </NavLink>
-                    <NavLink to="/blog" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                    <NavLink to="/blog" className={({ isActive }) =>
+                        `${isActive ? 'text-black' : 'text-white'} hover:text-black`
+                    }>
                         Blog
                     </NavLink>
-                    <NavLink to="/contact" className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}>
+                    <NavLink to="/contact" className={({ isActive }) =>
+                        `${isActive ? 'text-black' : 'text-white'} hover:text-black`
+                    }>
                         Contact
                     </NavLink>
                 </nav>
