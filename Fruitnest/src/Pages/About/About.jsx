@@ -8,7 +8,7 @@ function About() {
             <Heading name1="About Us" name2="About" />
 
             <section className="about">
-                <div className="w-full my-4">
+                <div className="w-full my-4" >
                     <h1 className="text-[#cf1a1a] text-[3rem] font-semibold text-center">Welcome to our shop</h1>
                     <h3 className="text-[#ff9421] text-[2.3rem] font-semibold text-center">Fresh & Organic Fruits</h3>
                     <p className="text-black text-justify text-2xl my-4">

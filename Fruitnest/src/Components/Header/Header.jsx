@@ -58,7 +58,7 @@ const Header = () => {
                 <div className="relative">
                     <NavLink to="/cart" id="cart-btn" className="fas fa-cart-shopping text-[2.5rem] md:text-[2.5rem] ml-4 cursor-pointer text-black hover:text-white"></NavLink>
                     {cartCount > 0 && (
-                        <span className="absolute top-[-8px] right-[-8px] bg-yellow-500 text-black text-sm px-2 py-1 rounded-full">
+                        <span className="absolute top-[-8px] right-[-8px] bg-yellow-500 text-black text-[1rem] px-2 py-1 rounded-full font-bold">
                             {cartCount}
                         </span>
                     )}
