@@ -9,11 +9,11 @@ function Review() {
         { name: "Avani", role: "happy client", image: "Images/female.png", comment: "Great customer support! I can always reach them on the phone, no matter the time. Really convenient for busy people like me." },
         { name: "Anshuman", role: "happy client", image: "Images/male.png", comment: "The payment process is so easy! I love the flexibility to pay with cash or UPI. It makes transactions hassle-free." },
         { name: "Simran", role: "happy client", image: "Images/female.png", comment: "Absolutely amazing service! The delivery was prompt and the customer service is top-notch. Highly recommended!" },
-        { name: "Virat", role: "happy client", image: "Images/male.png", comment: "Impressed with the professionalism! They really take care of every detail. Will definitely use their service again." },
         { name: "Anushka", role: "happy client", image: "Images/female.png", comment: "Superb experience! The entire process was seamless from start to finish. Their attention to customer satisfaction is commendable." },
-        { name: "Riya", role: "satisfied customer", image: "Images/female.png", comment: "Quick response and effective service! I'm glad I chose them for my delivery needs. Their reliability sets them apart." },
+        { name: "Virat", role: "happy client", image: "Images/male.png", comment: "Impressed with the professionalism! They really take care of every detail. Will definitely use their service again." },
+        { name: "Sanidhya", role: "satisfied customer", image: "Images/female.png", comment: "Quick response and effective service! I'm glad I chose them for my delivery needs. Their reliability sets them apart." },
         { name: "Kabir", role: "regular customer", image: "Images/male.png", comment: "Consistently excellent service! I've been using their service for months now and they never disappoint. Highly reliable!" },
-        { name: "Priya", role: "new customer", image: "Images/female.png", comment: "First-time user and very impressed! The whole experience was smooth and efficient. Definitely recommend to others." },
+        // { name: "Priya", role: "new customer", image: "Images/female.png", comment: "First-time user and very impressed! The whole experience was smooth and efficient. Definitely recommend to others." },
     ];
 
     return (
@@ -45,17 +45,17 @@ function Review() {
                 </div>
             </section>
 
-            <section className="w-full h-full grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 justify-center gap-12">
+            <section className="w-full h-full grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 justify-center gap-12">
                 {reviews.map((review, index) => (
-                    <div className="flex p-8 flex-col justify-center text-center h-[30rem] w-full overflow-hidden border-2 border-solid border-[#a8a297]" key={index}>
+                    <div className="flex p-8 flex-col justify-center text-center h-[25rem] w-full overflow-hidden border-2 border-solid border-[#a8a297]" key={index}>
                         <div className="flex items-center flex-col gap-4 p-4">
-                            <div className="h-[15rem] pt-20 bg-white w-full bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url('${review.image}')` }}></div>
+                            <div className="h-[10rem] pt-20 bg-white w-full bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url('${review.image}')` }}></div>
                             <div className="info">
-                                <h3 className="text-3xl font-semibold text-black">{review.name}</h3>
-                                <span className="text-xl text-slate-800">{review.role}</span>
+                                <h3 className="text-[2rem] font-semibold text-black">{review.name}</h3>
+                                <span className="text-2xl text-slate-800">{review.role}</span>
                             </div>
                         </div>
-                        <p className="text-[1.1rem] text-justify items-start text-slate-700 normal-case">{review.comment}</p>
+                        <p className="text-[1.2rem] text-justify items-start text-slate-700 normal-case">{review.comment}</p>
                     </div>
                 ))}
             </section>

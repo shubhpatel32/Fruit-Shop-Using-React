@@ -43,9 +43,9 @@ function Slideshow() {
     //     return () => clearTimeout(timer);
     // }, [currentIndex]);
 
-    // const goToSlide = (slideIndex) => {
-    //     setCurrentIndex(slideIndex);
-    // };
+    const goToSlide = (slideIndex) => {
+        setCurrentIndex(slideIndex);
+    };
 
     return (
         <div className='max-w-[1400px] h-[500px] md:h-[780px] w-full m-auto pt-32 px-4 relative group transition-none'>
