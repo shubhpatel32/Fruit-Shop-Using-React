@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import './Cart.css';
 import { Link } from 'react-router-dom';
 import { useCart } from '../../Context/CartContext';
+import Heading from '../../Components/Heading/Heading';
 
 function Cart() {
     const { cartItems, removeFromCart, incrementQuantity, decrementQuantity, emptyCart } = useCart();
@@ -19,13 +20,8 @@ function Cart() {
 
     return (
         <div>
-            <div className="heading bg-cover bg-center bg-no-repeat text-center pt-48 pb-32" style={{ backgroundImage: `url('/SliderImages/gradientbg.avif')` }}>
-                <h1 className="text-black text-[4rem]">Shopping Cart</h1>
-                <p className="pt-2 text-3xl text-black font-bold">
-                    <Link to="/" className="text-black pr-2 hover:text-red-700">Home</Link>
-                    <span className="hover:text-black">{">>"}</span> About
-                </p>
-            </div>
+            <Heading name1="Shopping Cart" name2="Cart" />
+
             {cartItems.length === 0 && !checkoutMessage ? (
                 <p className="empty text-5xl text-center pt-36 pb-[32rem] normal-case font-semibold">Your cart is empty.</p>
             ) : (

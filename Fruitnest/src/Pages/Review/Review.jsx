@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Heading from '../../Components/Heading/Heading';
 // import './Review.css';
 
 function Review() {
@@ -17,13 +18,9 @@ function Review() {
 
     return (
         <div>
-            <div className="heading bg-cover bg-center bg-no-repeat text-center pt-48 pb-32" style={{ backgroundImage: `url('/SliderImages/gradientbg.avif')` }}>
-                <h1 className="text-black text-[4rem]">Client's Review</h1>
-                <p className="pt-2 text-3xl text-black font-bold">
-                    <Link to="/" className="text-black pr-2 hover:text-red-700">Home</Link>
-                    <span className="hover:text-black">{">>"}</span> About
-                </p>
-            </div>
+
+            <Heading name1="Customer Reviews" name2="Review" />
+
             <section className="w-full grid grid-cols-3 gap-8 justify-center">
                 <div className="flex items-center flex-col justify-center text-center ">
                     <div className="bg-white h-32 w-full bg-center bg-contain bg-no-repeat" style={{ backgroundImage: "url('Images/scooter_147272.png')" }}></div>

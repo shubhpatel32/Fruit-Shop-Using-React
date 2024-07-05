@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Fruits from './Fruits';
-// import './Fruits.css';
+import Heading from '../../Components/Heading/Heading';
 
 
 function Shop() {
@@ -151,13 +151,7 @@ function Shop() {
 
     return (
         <div>
-            <div className="heading bg-cover bg-center bg-no-repeat text-center pt-48 pb-32" style={{ backgroundImage: `url('/SliderImages/gradientbg.avif')` }}>
-                <h1 className="text-black text-[4rem]">Our Shop</h1>
-                <p className="pt-2 text-3xl text-black font-bold">
-                    <Link to="/" className="text-black pr-2 hover:text-red-700">Home</Link>
-                    <span className="hover:text-black">{">>"}</span> About
-                </p>
-            </div>
+            <Heading name1="Our Shop" name2="Shop" />
             <section className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:grid-cols-2">
                 {fruits.map((fruit, index) => (
                     <Fruits key={index} fruit={fruit} />

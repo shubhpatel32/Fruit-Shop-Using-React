@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import './Blog.css';
+import Heading from '../../Components/Heading/Heading';
 
 const Blog = () => {
     const blogPosts = [
@@ -56,13 +56,7 @@ const Blog = () => {
 
     return (
         <div>
-            <div className="heading bg-cover bg-center bg-no-repeat text-center pt-48 pb-32" style={{ backgroundImage: `url('/SliderImages/gradientbg.avif')` }}>
-                <h1 className="text-black text-[4rem]">Our Blogs</h1>
-                <p className="pt-2 text-3xl text-black font-bold">
-                    <Link to="/" className="text-black pr-2 hover:text-red-700">Home</Link>
-                    <span className="hover:text-black">{">>"}</span> About
-                </p>
-            </div>
+            <Heading name1="Our Blogs" name2="Blog" />
 
             <section className="blogs">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center w-full mt-8">
