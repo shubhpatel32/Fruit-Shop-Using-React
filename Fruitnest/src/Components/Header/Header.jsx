@@ -19,33 +19,33 @@ const Header = () => {
             </Link>
 
             <div className="flex items-center justify-between w-full md:w-auto">
-                <nav className={`absolute top-[61px] flex-col md:flex-row md:flex ${isMenuOpen ? 'flex' : 'hidden'} md:flex items-center text-[1.5rem] md:text-2xl text-white gap-4 font-medium w-full bg-gradient-to-l from-red-700 to-yellow-400 left-0 md:items-center md:justify-center md:top-[10px] md:w-auto md:static md:bg-none divide-y`}>
+                <nav className={`absolute top-[61px] flex-col md:flex-row md:flex ${isMenuOpen ? 'flex' : 'hidden'} md:flex items-center text-[1.5rem] md:text-2xl text-white gap-3 font-medium w-full bg-white md:bg-none left-0 md:items-center md:justify-center md:top-[10px] md:w-auto md:static  divide-y p-4`}>
 
-                    <NavLink to="/" className={({ isActive }) => `${isActive ? 'text-black' : 'text-white'} hover:text-black`}>
+                    <NavLink to="/" className={({ isActive }) => `${isActive ? 'text-black' : 'text-white'} hover:text-black bg-gradient-to-l from-red-700 to-yellow-400 w-full text-center  md:bg-none md:w-auto md:mt-0 p-2`}>
                         Home
                     </NavLink>
                     <NavLink to="/shop" className={({ isActive }) =>
-                        `${isActive ? 'text-black' : 'text-white'} hover:text-black`
+                        `${isActive ? 'text-black' : 'text-white'} hover:text-black bg-gradient-to-l from-red-700 to-yellow-400 w-full text-center  md:bg-none md:w-auto md:mt-0 p-2`
                     }>
                         Shop
                     </NavLink>
                     <NavLink to="/about" className={({ isActive }) =>
-                        `${isActive ? 'text-black' : 'text-white'} hover:text-black`
+                        `${isActive ? 'text-black' : 'text-white'} hover:text-black bg-gradient-to-l from-red-700 to-yellow-400 w-full text-center  md:bg-none md:w-auto md:mt-0 p-2`
                     }>
                         About
                     </NavLink>
                     <NavLink to="/review" className={({ isActive }) =>
-                        `${isActive ? 'text-black' : 'text-white'} hover:text-black`
+                        `${isActive ? 'text-black' : 'text-white'} hover:text-black bg-gradient-to-l from-red-700 to-yellow-400 w-full text-center  md:bg-none md:w-auto md:mt-0 p-2`
                     }>
                         Review
                     </NavLink>
                     <NavLink to="/blog" className={({ isActive }) =>
-                        `${isActive ? 'text-black' : 'text-white'} hover:text-black`
+                        `${isActive ? 'text-black' : 'text-white'} hover:text-black bg-gradient-to-l from-red-700 to-yellow-400 w-full text-center  md:bg-none md:w-auto md:mt-0 p-2`
                     }>
                         Blog
                     </NavLink>
                     <NavLink to="/contact" className={({ isActive }) =>
-                        `${isActive ? 'text-black' : 'text-white'} hover:text-black`
+                        `${isActive ? 'text-black' : 'text-white'} hover:text-black bg-gradient-to-l from-red-700 to-yellow-400 w-full text-center  md:bg-none md:w-auto md:mt-0 p-2`
                     }>
                         Contact
                     </NavLink>
